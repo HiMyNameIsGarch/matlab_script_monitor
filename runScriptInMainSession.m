@@ -1,17 +1,18 @@
 % this function is called in another script (monitorScript.m) that runs in the background
 function runScriptInMainSession(scriptPath)
     % log the process
-    disp('Data received in main session. Running script...');
-    disp(['Script path: ', scriptPath]);
+    my_disp('Data received in main session. Running script...');
+    my_disp(['Script path: ', scriptPath]);
     try
         % clear the workspace ( for small changes in the script )
         clear(scriptPath);
         % run the script
         run(scriptPath);
-        disp('Script executed successfully.');
+        my_disp('Script executed successfully.');
+        send_to_neovim('MATLAB: Script executed successfully.');
     catch ME
-        disp('Error executing the script:');
-        disp(ME.message);
+        my_disp('Error executing the script:');
+        my_disp(ME.message);
     end
 end
 
