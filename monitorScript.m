@@ -5,7 +5,7 @@
 
 function monitorScript(dataQueue)
     diary on;  % Enable logging
-    my_disp('Monitoring script started. Waiting for changes in /tmp/matlab_live_script');
+    my_disp('Monitoring script started. Waiting for changes in /tmp/matlab_live_script', 1);
 
     % Path to the temporary file
     tempFile = '/tmp/matlab_live_script';

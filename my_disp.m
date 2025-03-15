@@ -3,7 +3,7 @@
 % Neovim)
 function my_disp(msg, write_to_nvim)
     if nargin < 2
-        write_to_nvim = 1;
+        write_to_nvim = 0;
     end
 
     disp(msg);
