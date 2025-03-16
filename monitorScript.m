@@ -36,8 +36,8 @@ function monitorScript(dataQueue)
                     my_disp(['Script not found: ', scriptPath]);
                 end
             catch ME
-                my_disp('Error reading the file:');
-                my_disp(ME.message);
+                my_disp('Error reading the file:', 1);
+                my_disp(ME.message, 1);
             end
         end
 
